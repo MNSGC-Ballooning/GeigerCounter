@@ -4,19 +4,17 @@
 #include <Arduino.h>
 
 namespace Geiger {
-	volatile unsigned long totalCount;
-	volatile unsigned long cycleCount;
-	void ISR() {
-		totalCount++;
-		cycleCount++;
-	}
+	void geiger_ISR();
 }
 
 class GeigerCounter {
 	public:
 		GeigerCounter(byte pin);
+		void initialize();
 		unsigned long getTotalCount();
 		unsigned long getCycleCount();
-}
+	private:
+		byte pin;
+};
 
 #endif
