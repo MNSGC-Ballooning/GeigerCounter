@@ -19,12 +19,17 @@ void GeigerCounter::initialize() {
 }
 
 unsigned long GeigerCounter::getTotalCount() {
-	return Geiger::totalCount;
+	noInterrupts();
+	unsigned long totalCount = Geiger::totalCount;
+	interrupts();
+	return totalCount;
 }
 
 unsigned long GeigerCounter::getCycleCount() {
+	noInterrupts();
 	unsigned long cycleCount = Geiger::cycleCount;
 	Geiger::cycleCount = 0;
+	interrupts();
 	return cycleCount;
 }
 
