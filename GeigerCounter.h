@@ -10,11 +10,11 @@ class GeigerCounter {
 		void initialize();
 		unsigned long getTotalCount();
 		unsigned long getCycleCount();
-		bool confirm();
 	private:
 		byte pin;
 		volatile unsigned long totalCount;
 		volatile unsigned long cycleCount;
+		bool confirm();
 		static GeigerCounter** geigerList;
 		static byte geigerNum;
 		static void geigerISR();
