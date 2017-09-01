@@ -5,8 +5,8 @@ GeigerCounter** GeigerCounter::geigerList = NULL;
 byte GeigerCounter::geigerNum = 0;
 
 //constructor for GeigerCounter object. Adds newly created object to array
-GeigerCounter::GeigerCounter(byte pin) {
-	this->pin = pin;
+GeigerCounter::GeigerCounter(byte pin):
+	pin(pin) {
 	GeigerCounter** newGeigers = new GeigerCounter*[geigerNum + 1];
 	for (byte i = 0; i < geigerNum; i++) {
 		newGeigers[i] = geigerList[i];
