@@ -32,7 +32,7 @@ GeigerCounter::~GeigerCounter() {
 }
 
 //call during setup to connect the ISR to the geiger's pin and start tracking hits
-void GeigerCounter::initialize() {
+void GeigerCounter::init() {
   pinMode(pin, INPUT);
   attachInterrupt(digitalPinToInterrupt(pin),GeigerCounter::geigerISR,FALLING);
 }

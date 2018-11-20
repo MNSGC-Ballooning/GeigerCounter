@@ -1,4 +1,4 @@
 GeigerCounter	KEYWORD1
-initialize	KEYWORD2
+init	KEYWORD2
 getTotalCount	KEYWORD2
 getCycleCount	KEYWORD2

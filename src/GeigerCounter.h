@@ -7,7 +7,7 @@ class GeigerCounter {
   public:
     GeigerCounter(byte pin);
     ~GeigerCounter();
-    void initialize();
+    void init();
     unsigned long getTotalCount();
     unsigned long getCycleCount();
   private:

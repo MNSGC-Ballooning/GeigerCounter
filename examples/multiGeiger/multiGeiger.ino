@@ -12,8 +12,8 @@ void setup() {
   Serial.begin(115200);
 
   //Begin tracking hits on each geiger
-  geiger1.initialize();
-  geiger2.initialize();
+  geiger1.init();
+  geiger2.init();
 }
 
 void loop() {
